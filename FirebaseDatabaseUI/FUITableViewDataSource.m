@@ -91,17 +91,17 @@
 
 - (void)array:(FUIArray *)array didAddObject:(id)object atIndex:(NSUInteger)index {
   [self.tableView insertRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:index inSection:0] ]
-                        withRowAnimation:UITableViewRowAnimationAutomatic];
+                        withRowAnimation:UITableViewRowAnimationNone];
 }
 
 - (void)array:(FUIArray *)array didChangeObject:(id)object atIndex:(NSUInteger)index {
   [self.tableView reloadRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:index inSection:0] ]
-                        withRowAnimation:UITableViewRowAnimationAutomatic];
+                        withRowAnimation:UITableViewRowAnimationNone];
 }
 
 - (void)array:(FUIArray *)array didRemoveObject:(id)object atIndex:(NSUInteger)index {
   [self.tableView deleteRowsAtIndexPaths:@[ [NSIndexPath indexPathForRow:index inSection:0] ]
-                        withRowAnimation:UITableViewRowAnimationAutomatic];
+                        withRowAnimation:UITableViewRowAnimationNone];
 }
 
 - (void)array:(FUIArray *)array didMoveObject:(id)object
